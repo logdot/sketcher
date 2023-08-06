@@ -21,7 +21,16 @@ h1 {
     box-sizing: content-box;
 }
 
-#length-input {
+#length {
+    display: flex;
+    justify-content: center;
+    width: 600px;
     margin: auto;
-    display: block;
+    gap: 20px;
 }
+
+#length-input {
+    flex-grow: 1;
+}
+
+#length-text {}

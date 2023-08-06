@@ -1,6 +1,9 @@
 let length = 10;
 let lengthInput = document.getElementById('length-input');
+let lengthText = document.getElementById('length-text');
+
 lengthInput.value = length;
+lengthText.innerHTML = length;
 
 let container = document.querySelector('.container');
 
@@ -28,6 +31,7 @@ GenerateGrid();
 
 lengthInput.onchange = () => {
     length = lengthInput.value;
+    lengthText.innerHTML = length;
 
     ClearGrid();
     GenerateGrid();
