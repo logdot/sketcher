@@ -1,0 +1,22 @@
+body,
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.container {
+    background-color: white;
+    display: grid;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+}
+
+.cell {
+    border: 1px solid black;
+    box-sizing: content-box;
+}
