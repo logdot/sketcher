@@ -13,6 +13,8 @@ let colorPickerButton = document.getElementById('color-picker-button');
 let rainbowButton = document.getElementById('rainbow-button');
 let shadeButton = document.getElementById('shade-button');
 
+let clearButton = document.getElementById('clear-button');
+
 let colorGenerator = ColorPickerGenerator;
 
 colorPickerButton.addEventListener('click', () => {
@@ -35,6 +37,11 @@ shadeButton.addEventListener('click', () => {
     rainbowButton.classList.remove('selected');
     colorPickerButton.classList.remove('selected');
 });
+
+clearButton.addEventListener('click', () => {
+    ClearGrid();
+    GenerateGrid();
+})
 
 function ColorPickerGenerator(currColor) {
     return colorInput.value;
