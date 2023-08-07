@@ -7,6 +7,8 @@ lengthText.innerHTML = length;
 
 let container = document.querySelector('.container');
 
+let colorInput = document.getElementById('color-input');
+
 function GenerateGrid() {
     container.style.cssText = `grid-template-columns: repeat(${length}, 1fr); grid-template-rows: repeat(${length}, 1fr);`;
 
@@ -14,7 +16,7 @@ function GenerateGrid() {
         let cell = document.createElement('div');
         cell.classList.add('cell');
         cell.addEventListener('mouseover', () => {
-            cell.style.backgroundColor = 'red';
+            cell.style.backgroundColor = colorInput.value;
         });
 
         container.appendChild(cell);
