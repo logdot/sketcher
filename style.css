@@ -16,6 +16,10 @@ main {
     margin: auto;
 }
 
+button {
+    height: 3rem;
+}
+
 .inputs {
     display: flex;
     flex-direction: column;
@@ -62,4 +66,15 @@ main {
     height: 40px;
     padding: 0px;
     border: 0px;
+}
+
+#generator-selecor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#generator-selecor>button {
+    flex-grow: 1;
+    flex-basis: 50px;
 }

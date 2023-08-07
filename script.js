@@ -9,6 +9,24 @@ let container = document.querySelector('.container');
 
 let colorInput = document.getElementById('color-input');
 
+let colorPickerButton = document.getElementById('color-picker-button');
+let rainbowButton = document.getElementById('rainbow-button');
+let shadeButton = document.getElementById('shade-button');
+
+let colorGenerator = ColorPickerGenerator;
+
+colorPickerButton.addEventListener('click', () => {
+    colorGenerator = ColorPickerGenerator;
+});
+
+rainbowButton.addEventListener('click', () => {
+    colorGenerator = RainbowGenerator;
+});
+
+shadeButton.addEventListener('click', () => {
+    colorGenerator = ShadeGenerator;
+});
+
 function ColorPickerGenerator(currColor) {
     return colorInput.value;
 }
@@ -40,7 +58,7 @@ function GenerateGrid() {
         cell.style.backgroundColor = "rgb(255, 255, 255)";
 
         cell.addEventListener('mouseover', () => {
-            cell.style.backgroundColor = ShadeGenerator(cell.style.backgroundColor);
+            cell.style.backgroundColor = colorGenerator(cell.style.backgroundColor);
         });
 
         container.appendChild(cell);
