@@ -1,6 +1,7 @@
 body,
 html {
     font-family: 'Ubuntu', sans-serif;
+    background-color: #F6F4EB;
 }
 
 h1 {
@@ -18,11 +19,20 @@ main {
 
 button {
     height: 3rem;
+    background-color: #749BC2;
+    border-color: #4682A9;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.selected {
+    background-color: #91C8E4;
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 400px;
     padding: 0 20px;
 }
@@ -41,6 +51,7 @@ button {
     width: 600px;
     height: 600px;
     margin-right: auto;
+    box-shadow: 5px 5px 10px gray;
 }
 
 .cell {
