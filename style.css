@@ -8,12 +8,31 @@ h1 {
     font-size: 4rem;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 1000px;
+    margin: auto;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 0 20px;
+}
+
+.inputs>div {
+    width: 100%;
+}
+
 .container {
     background-color: white;
     display: grid;
     width: 600px;
     height: 600px;
-    margin: auto;
+    margin-right: auto;
 }
 
 .cell {
@@ -24,8 +43,7 @@ h1 {
 #length {
     display: flex;
     justify-content: center;
-    width: 600px;
-    margin: auto;
+    margin: 0 auto;
     gap: 20px;
 }
 
