@@ -43,6 +43,13 @@ clearButton.addEventListener('click', () => {
     GenerateGrid();
 })
 
+// This section contains our color generator functions.
+// These ideally would be backed by some sort of interface, but I don't know how to do that yet in JS.
+// These simply take the current color of the cell and return a new color.
+// The new color may or may not be based on the current color.
+//
+// These are injected into the code that draws onto the grid.
+// This way the coloring code can be agnostic to how we're selecting the color to use.
 function ColorPickerGenerator(currColor) {
     return colorInput.value;
 }
