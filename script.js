@@ -1,4 +1,4 @@
-let length = 10;
+let length = 8;
 let lengthInput = document.getElementById('length-input');
 let lengthText = document.getElementById('length-text');
 
