@@ -17,14 +17,23 @@ let colorGenerator = ColorPickerGenerator;
 
 colorPickerButton.addEventListener('click', () => {
     colorGenerator = ColorPickerGenerator;
+    colorPickerButton.classList.add('selected');
+    rainbowButton.classList.remove('selected');
+    shadeButton.classList.remove('selected');
 });
 
 rainbowButton.addEventListener('click', () => {
     colorGenerator = RainbowGenerator;
+    rainbowButton.classList.add('selected');
+    colorPickerButton.classList.remove('selected');
+    shadeButton.classList.remove('selected');
 });
 
 shadeButton.addEventListener('click', () => {
     colorGenerator = ShadeGenerator;
+    shadeButton.classList.add('selected');
+    rainbowButton.classList.remove('selected');
+    colorPickerButton.classList.remove('selected');
 });
 
 function ColorPickerGenerator(currColor) {
