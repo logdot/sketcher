@@ -9,6 +9,15 @@ let container = document.querySelector('.container');
 
 let colorInput = document.getElementById('color-input');
 
+function ColorPickerGenerator(currColor) {
+    return colorInput.value;
+}
+
+function RainbowGenerator(currColor) {
+    randomNumber = () => Math.floor(Math.random() * (255 - 0 + 1)) + 0;
+    return `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
+}
+
 function GenerateGrid() {
     container.style.cssText = `grid-template-columns: repeat(${length}, 1fr); grid-template-rows: repeat(${length}, 1fr);`;
 
@@ -16,7 +25,7 @@ function GenerateGrid() {
         let cell = document.createElement('div');
         cell.classList.add('cell');
         cell.addEventListener('mouseover', () => {
-            cell.style.backgroundColor = colorInput.value;
+            cell.style.backgroundColor = RainbowGenerator();
         });
 
         container.appendChild(cell);
